@@ -864,9 +864,18 @@ nav ul.phone-links li:hover{
   color: hsl(0 0% 8% / var(--tw-text-opacity));
 }
 
+nav ul.phone-links li.menu{
+  margin-bottom: 0px;
+}
+
 nav ul.phone-links li.active{
   --tw-text-opacity: 1;
   color: hsl(0 0% 8% / var(--tw-text-opacity));
+}
+
+nav ul.phone-links li.active + li.menu{
+  margin-bottom: 1rem;
+  display: block;
 }
 
 nav ul.phone-links li img{
@@ -880,9 +889,11 @@ nav ul.phone-links li.active img {
       brightness(95%) contrast(89%);
 }
 
-nav ul.phone-links li + ul{
+nav ul.phone-links li.menu ul{
   position: static;
   height: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   opacity: 0;
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
@@ -892,7 +903,8 @@ nav ul.phone-links li + ul{
   transition-duration: 150ms;
 }
 
-nav ul.phone-links li.active + ul{
+nav ul.phone-links li.active + li.menu ul{
+  display: block;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -904,7 +916,7 @@ nav ul.phone-links li ul li{
   margin-right: 0px;
 }
 
-nav ul.phone-links li + ul li img{
+nav ul.phone-links li + li.menu ul li img{
   margin-right: 0.75rem;
   margin-left: 1.5rem;
 }

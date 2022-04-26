@@ -137,8 +137,15 @@
   nav ul.phone-links li {
     @apply w-full mb-4 relative flex items-center text-mediumGray hover:text-almostBlack transition-all;
   }
+  nav ul.phone-links li.menu {
+    @apply mb-0
+  }
+
   nav ul.phone-links li.active {
     @apply text-almostBlack;
+  }
+  nav ul.phone-links li.active + li.menu {
+    @apply mb-4 block;
   }
   nav ul.phone-links li img {
     @apply ml-3;
@@ -149,16 +156,16 @@
     filter: invert(3%) sepia(6%) saturate(135%) hue-rotate(314deg)
       brightness(95%) contrast(89%);
   }
-  nav ul.phone-links li + ul {
-    @apply h-0 shadow-none static opacity-0 transition-all;
+  nav ul.phone-links li.menu ul {
+    @apply h-0 shadow-none block static opacity-0 transition-all py-0;
   }
-  nav ul.phone-links li.active + ul {
-    @apply h-fit opacity-100;
+  nav ul.phone-links li.active + li.menu ul {
+    @apply h-fit opacity-100 block;
   }
   nav ul.phone-links li ul li {
     @apply mx-0;
   }
-  nav ul.phone-links li + ul li img {
+  nav ul.phone-links li + li.menu ul li img {
     @apply mr-3 ml-6;
   }
   .overlay {
