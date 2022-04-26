@@ -171,14 +171,14 @@
   nav > div > div a:last-child {
     @apply text-mediumGray border-2 border-mediumGray hover:text-almostBlack hover:border-almostBlack rounded-xl p-3 px-4 transition-colors;
   }
-  body > div {
+  body > main {
     @apply sm:flex flex-col lg:flex-row-reverse lg:items-center lg:px-28 lg:pt-12;
   }
-  body > div > img {
+  body > main > img {
     @apply lg:w-96 lg:flex-shrink;
   }
   @media (min-width: 1280px) {
-    body > div > img {
+    body > main > img {
       width: 26rem;
       @apply mr-16;
     }
@@ -195,7 +195,7 @@
     nav {
       @apply px-20;
     }
-    body > div > img {
+    body > main > img {
       width: 30rem;
       margin-right: 5rem;
     }
