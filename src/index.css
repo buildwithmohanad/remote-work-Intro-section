@@ -1,4 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  body {
+    @apply font-primary text-lg font-medium  h-full min-h-screen pb-4 sm:pb-8 md:pb-12;
+  }
+  nav {
+    @apply flex justify-between lg:justify-start items-center p-4 mb-4 px-6 sm:p-6 sm:px-8 md:p-8 md:px-10 xl:px-16;
+  }
+  nav button span {
+    @apply bg-almostBlack w-6 transition-all lg:hidden;
+    height: 2.4px;
+  }
+  nav button span:nth-child(2) {
+    right: -100%;
+    top: 2.5%;
+  }
+  nav button.close {
+    cursor: pointer;
+    height: 48px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0, 0, 0, 1) 0s;
+    user-select: none;
+    width: 48px;
+    outline: none;
+    transform: rotateY(-180deg);
+  }
+
+  nav button.close span:first-child {
+    left: 14px;
+    position: absolute;
+    top: 17px;
+    transition: all 0.4s cubic-bezier(0, 0, 0, 1) 0s;
+    transform: rotate(-45deg) translate(-4.23px, 4.23px);
+  }
+  nav button.close span:nth-child(2) {
+    left: 14px;
+    position: absolute;
+    top: 23px;
+    transition: all 0.4s cubic-bezier(0, 0, 0, 1) 0s;
+    transform: scale(0, 1) translate(-84.6px, 0px);
+  }
+  nav button.close span:last-child {
+    left: 14px;
+    position: absolute;
+    top: 29px;
+    transition: all 0.4s cubic-bezier(0, 0, 0, 1) 0s;
+    transform: rotate(45deg) translate(-4.23px, -4.23px);
+  }
+  nav button {
+    height: 48px;
+    transition: all 0.4s cubic-bezier(0, 0, 0, 1) 0s;
+    width: 48px;
+    @apply cursor-pointer relative select-none outline-none transform-none z-10;
+  }
+  nav button span:first-child {
+    left: 14px;
+    position: absolute;
+    top: 17px;
+    transition: all 0.4s cubic-bezier(0, 0, 0, 1) 0s;
+    transform: none;
+  }
+  nav button span:nth-child(2) {
+    left: 14px;
+    position: absolute;
+    top: 23px;
+    transition: all 0.4s cubic-bezier(0, 0, 0, 1) 0s;
+    transform: none;
+  }
+  nav button span:last-child {
+    left: 14px;
+    position: absolute;
+    top: 29px;
+    transition: all 0.4s cubic-bezier(0, 0, 0, 1) 0s;
+    transform: none;
+  }
+
+  nav > div {
+    @apply hidden lg:flex justify-between ml-8 w-full text-base;
+  }
+  nav div > ul {
+    @apply flex;
+  }
+  nav div > ul > li {
+    @apply text-mediumGray hover:text-almostBlack ml-6 flex items-center relative xl:text-lg;
+  }
+  nav div > ul li img {
+    @apply ml-2 h-fit transition-all;
+  }
+  nav div > ul > li.active {
+    @apply text-almostBlack;
+  }
+  nav div > ul > li.acitve img {
+    filter: invert(0%) sepia(3%) saturate(6055%) hue-rotate(327deg)
+      brightness(98%) contrast(84%);
+    @apply rotate-90;
+  }
+  nav ul li:last-child {
+    @apply mr-0;
+  }
+  nav ul li > ul {
+    @apply hidden absolute shadow-2xl bg-almostWhite rounded-lg p-6 px-0 top-8 right-0 flex-col;
+  }
+
+  nav ul li > ul li {
+    @apply mb-3 flex text-sm xl:text-base text-mediumGray hover:text-almostBlack transition-colors w-full mx-8;
+  }
+  nav ul li > ul li img {
+    @apply ml-0 mr-3;
+  }
+  nav ul li > ul li:last-child {
+    @apply mb-0;
+  }
+  nav ul li img {
+    @apply transition-all;
+    transform: rotate(0);
+  }
+  nav ul li.active img {
+    transform: rotate(180deg);
+    filter: invert(3%) sepia(6%) saturate(135%) hue-rotate(314deg)
+      brightness(95%) contrast(89%);
+  }
+  nav ul li.active > ul {
+    @apply flex;
+  }
+  nav ul li > ul li.active {
+    @apply text-almostBlack;
+  }
+  nav ul.phone-links {
+    @apply fixed right-0 flex flex-col transition-all w-3/5 h-full top-0 bg-almostWhite px-8;
+    padding-top: 15%;
+    right: -100%;
+  }
+  nav ul.phone-links li {
+    @apply w-full mb-4 relative flex items-center text-mediumGray hover:text-almostBlack transition-all;
+  }
+  nav ul.phone-links li.active {
+    @apply text-almostBlack;
+  }
+  nav ul.phone-links li img {
+    @apply ml-3;
+    transform: rotate(0deg);
+  }
+  nav ul.phone-links li.active img {
+    transform: rotate(180deg);
+    filter: invert(3%) sepia(6%) saturate(135%) hue-rotate(314deg)
+      brightness(95%) contrast(89%);
+  }
+  nav ul.phone-links li + ul {
+    @apply h-0 shadow-none static opacity-0 transition-all;
+  }
+  nav ul.phone-links li.active + ul {
+    @apply h-fit opacity-100;
+  }
+  nav ul.phone-links li ul li {
+    @apply mx-0;
+  }
+  nav ul.phone-links li + ul li img {
+    @apply mr-3 ml-6;
+  }
+  .overlay {
+    background-color: rgba(0, 0, 0, 0);
+    @apply absolute top-0 left-0 w-2/5 h-full -z-10;
+  }
+  nav > div > div a:first-child {
+    @apply text-mediumGray hover:text-almostBlack transition-colors mr-6;
+  }
+  nav > div > div a:last-child {
+    @apply text-mediumGray border-2 border-mediumGray hover:text-almostBlack hover:border-almostBlack rounded-xl p-3 px-4 transition-colors;
+  }
+  body > div {
+    @apply sm:flex flex-col lg:flex-row-reverse lg:items-center lg:px-28 lg:pt-12;
+  }
+  body > div > img {
+    @apply lg:w-96 lg:flex-shrink;
+  }
+  @media (min-width: 1280px) {
+    body > div > img {
+      width: 26rem;
+      @apply mr-16;
+    }
+  }
+
+  div.text {
+    @apply text-center h-full sm:px-16 md:px-24 lg:px-0 lg:text-left lg:mr-16  xl:px-16 lg:flex flex-col  justify-between;
+  }
+
+  h1 {
+    @apply text-almostBlack font-bold text-3xl sm:text-5xl md:text-6xl lg:text-5xl  mt-8;
+  }
+  @media (min-width: 1440px) {
+    nav {
+      @apply px-20;
+    }
+    body > div > img {
+      width: 30rem;
+      margin-right: 5rem;
+    }
+    div.text {
+      padding: 0 6rem;
+    }
+    h1 {
+      @apply text-5xl;
+    }
+  }
+  p {
+    @apply text-mediumGray mt-4 mb-6 text-base px-5 sm:px-0 sm:text-lg lg:my-8;
+    font-size: 15px;
+  }
+  .text div > a {
+    @apply inline-block p-6 py-3 text-base mb-12 sm:text-lg bg-almostBlack text-almostWhite rounded-2xl hover:text-almostBlack hover:bg-almostWhite transition-all border hover:border-almostBlack;
+  }
+  div.companies {
+    @apply flex justify-between lg:pt-16;
+  }
+  div.companies img {
+    transform: scale(0.65);
+    @apply sm:scale-75 md:scale-90 lg:scale-50 xl:scale-75 -z-10;
+  }
+}

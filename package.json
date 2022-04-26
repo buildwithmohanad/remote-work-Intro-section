@@ -1,10 +1,9 @@
 {
   "name": "remote-work-intro-section",
   "version": "1.0.0",
-  "description": "![Design preview for the Intro section with dropdown navigation coding challenge](./design/desktop-preview.jpg)",
-  "main": "index.js",
+  "description": "page taking about remote work",
   "scripts": {
-    "build-css": "tailwindcss build -i src/index.css -o dist/index.css --watch"
+    "build": "tailwindcss build -i src/index.css -o dist/index.css --watch"
   },
   "repository": {
     "type": "git",
@@ -21,8 +20,13 @@
     "autoprefixer": "^10.4.4",
     "css-loader": "^6.7.1",
     "cssnano": "^5.1.7",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-uglify": "^3.0.2",
     "postcss": "^8.4.12",
     "postcss-cli": "^9.1.0",
+    "run-sequence": "^2.2.1",
     "tailwindcss": "^3.0.24"
   }
 }
