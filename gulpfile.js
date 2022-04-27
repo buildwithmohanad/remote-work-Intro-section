@@ -14,7 +14,6 @@ return gulp.src('src/origin.html')
 
 
 
-
 gulp.task('scripts', function() {
   return gulp.src('./src/script.js')
     // Minify the file
