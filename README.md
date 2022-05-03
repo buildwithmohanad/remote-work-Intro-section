@@ -48,7 +48,6 @@ Users should be able to:
 
 ## Author
 
-
 - Frontend Mentor - [@Mohannad-AlDardiri](https://www.frontendmentor.io/profile/Mohannad-AlDardiri)
 - Twitter - [@MohanadDardiry](https://www.twitter.com/MohanadDardiry)
 
