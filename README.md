@@ -10,7 +10,6 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-- [Author](#author)
 
 
 ## Overview
@@ -31,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [click here](https://github.com/Mohannad-AlDardiri/remote-work-Intro-section)
-- Live Site URL: [click here](https://mohannad-aldardiri.github.io/remote-work-Intro-section)
+- Solution URL: [click here](https://github.com/ahmed-eldardeery/remote-work-Intro-section)
+- Live Site URL: [click here](https://ahmed-eldardeery.github.io/remote-work-Intro-section)
 
 ## My process
 
@@ -46,8 +45,4 @@ Users should be able to:
 - [Tailwind css](https://tailwindcss.com/) - For styles
 
 
-## Author
-
-- Frontend Mentor - [@Mohannad-AlDardiri](https://www.frontendmentor.io/profile/Mohannad-AlDardiri)
-- Twitter - [@MohanadDardiry](https://www.twitter.com/MohanadDardiry)
 
