@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [click here](https://github.com/ahmed-eldardeery/remote-work-Intro-section)
-- Live Site URL: [click here](https://ahmed-eldardeery.github.io/remote-work-Intro-section)
+- Solution URL: [click here](https://github.com/buildwithmohanad/remote-work-Intro-section)
+- Live Site URL: [click here](https://buildwithmohanad.github.io/remote-work-Intro-section)
 
 ## My process
 
